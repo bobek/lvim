@@ -4,6 +4,7 @@ lvim.lint_on_save = true
 lvim.colorscheme = "onedarker"
 
 vim.opt.spelllang = "en,cs"
+vim.opt.spell = true
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = ","
@@ -48,6 +49,7 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.dap.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {}
@@ -105,7 +107,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- }
 
 lvim.plugins = {
-  { "ggandor/lightspeed.nvim" },
+--  { "ggandor/lightspeed.nvim" },
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
