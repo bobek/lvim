@@ -152,6 +152,11 @@ lvim.plugins = {
       vim.g.mkdp_auto_start = 1
     end,
   },
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { name = "flake8" },
+  { name = "shellcheck" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
