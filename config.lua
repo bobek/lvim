@@ -52,6 +52,11 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 
+local components = require("lvim.core.lualine.components")
+lvim.builtin.lualine.sections.lualine_y = {
+  components.location
+}
+
 lvim.builtin.dap.active = true
 
 lvim.builtin.nvimtree.setup.view.side = "left"
