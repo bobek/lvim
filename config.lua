@@ -15,6 +15,14 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 
+lvim.keys.normal_mode["<C-b>"] = "<cmd>Telescope buffers<cr>"
+lvim.keys.insert_mode["<C-b>"] = "<cmd>Telescope buffers<cr>"
+
+lvim.builtin.telescope.pickers.buffers = {
+  ignore_current_buffer = true,
+  sort_mru = true,
+}
+
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- lvim.builtin.telescope.on_config_done = function()
 --   local actions = require "telescope.actions"
