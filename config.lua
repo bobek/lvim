@@ -26,9 +26,11 @@ lvim.builtin.telescope.pickers.buffers = {
 }
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
-lvim.builtin.telescope.on_config_done = function()
+lvim.builtin.telescope.on_config_done = function(telescope)
   local actions = require "telescope.actions"
   lvim.builtin.telescope.defaults.mappings.i["<c-d>"] = actions.delete_buffer
+
+  pcall(telescope.load_extension, "neoclip")
 
   --   -- for input mode
   --   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
@@ -42,6 +44,7 @@ end
 
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["s"]["c"] = { "<cmd>Telescope neoclip<CR>", "Cliboard (neoclip)" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
 --   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -152,6 +155,18 @@ lvim.plugins = {
       vim.g.mkdp_auto_start = 1
     end,
   },
+  {
+    "AckslD/nvim-neoclip.lua",
+    requires = {
+      -- you'll need at least one of these
+      -- {'nvim-telescope/telescope.nvim'},
+      -- {'ibhagwan/fzf-lua'},
+    },
+    config = function()
+      require('neoclip').setup()
+    end,
+  },
+}
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
