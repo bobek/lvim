@@ -1,7 +1,11 @@
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "onedarker"
+-- lvim.colorscheme = "onedarker"
+lvim.colorscheme = "tokyonight-night"
+
+vim.opt.showtabline = 0
+lvim.builtin.bufferline.active = false
 
 vim.opt.spelllang = "en,cs"
 vim.opt.spell = true
@@ -66,6 +70,9 @@ lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
+
+lvim.builtin.notify.active = true
+lvim.builtin.breadcrumbs.active = true
 
 local components = require("lvim.core.lualine.components")
 lvim.builtin.lualine.sections.lualine_y = {
