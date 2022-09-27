@@ -1,4 +1,8 @@
 require "user.plugins"
+
+require "user.icons"
+require "user.todo-comments"
+
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
