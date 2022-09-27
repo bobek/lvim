@@ -1,6 +1,7 @@
 require "user.plugins"
 
 require "user.icons"
+require "user.git"
 require "user.todo-comments"
 
 -- general

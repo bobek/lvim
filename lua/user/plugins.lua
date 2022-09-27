@@ -10,6 +10,8 @@
 lvim.plugins = {
   "folke/todo-comments.nvim",
   --  { "ggandor/lightspeed.nvim" },
+
+  "ruifm/gitlinker.nvim",
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
