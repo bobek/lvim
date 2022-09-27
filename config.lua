@@ -160,6 +160,14 @@ lvim.plugins = {
     end,
   },
   {
+    "kylechui/nvim-surround",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  },
+  {
     "AckslD/nvim-neoclip.lua",
     requires = {
       -- you'll need at least one of these
