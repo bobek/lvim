@@ -12,6 +12,9 @@ lvim.plugins = {
   --  { "ggandor/lightspeed.nvim" },
 
   "ruifm/gitlinker.nvim",
+
+  "NvChad/nvim-colorizer.lua",
+
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
