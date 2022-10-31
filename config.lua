@@ -77,7 +77,6 @@ lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.setup.view.side = "left"
 -- lvim.builtin.nvimtree.show_icons.git = 0
 
-lvim.builtin.notify.active = true
 lvim.builtin.breadcrumbs.active = true
 
 local components = require("lvim.core.lualine.components")
