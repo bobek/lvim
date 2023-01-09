@@ -48,4 +48,13 @@ lvim.plugins = {
       require("leap").set_default_keymaps()
     end
   },
+
+  {
+    "andrewferrier/wrapping.nvim",
+    config = function()
+      require("wrapping").setup({
+        softener = { markdown = 1.9 },
+      })
+    end,
+  },
 }

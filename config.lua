@@ -158,3 +158,5 @@ linters.setup {
 -- }
 
 lvim.builtin.terminal.execs = { { "/bin/false", "gg", "pokus" } }
+
+vim.opt.textwidth = 80
