@@ -51,6 +51,19 @@ lvim.plugins = {
     end
   },
 
+  -- automatically install all the formatters and linters specified by the following
+  -- config options:
+  -- * linters.setup
+  -- * formatters.setup
+  { "jayp0521/mason-null-ls.nvim",
+    config = function()
+      require "mason-null-ls".setup({
+        automatic_installation = false,
+        automatic_setup = true,
+        ensure_installed = nil
+      })
+    end
+  },
 
   { "jackMort/ChatGPT.nvim",
     config = function()
