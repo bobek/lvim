@@ -152,11 +152,6 @@ linters.setup {
   { name = "shellcheck" },
 }
 
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
-
 lvim.builtin.terminal.execs = { { "/bin/false", "gg", "pokus" } }
 
 vim.opt.textwidth = 80
