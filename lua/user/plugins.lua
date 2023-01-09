@@ -15,6 +15,8 @@ lvim.plugins = {
 
   "NvChad/nvim-colorizer.lua",
 
+  "anufrievroman/vim-angry-reviewer",
+
   { "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
