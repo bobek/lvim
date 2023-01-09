@@ -4,6 +4,8 @@ require "user.icons"
 require "user.git"
 require "user.todo-comments"
 
+require "user.lsp"
+
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
