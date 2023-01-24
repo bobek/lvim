@@ -26,9 +26,11 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
-
+--
 lvim.keys.normal_mode["<C-b>"] = "<cmd>Telescope buffers<cr>"
 lvim.keys.insert_mode["<C-b>"] = "<cmd>Telescope buffers<cr>"
+
+lvim.keys.insert_mode["<C-l>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 
 lvim.builtin.telescope.pickers.buffers = {
   ignore_current_buffer = true,
