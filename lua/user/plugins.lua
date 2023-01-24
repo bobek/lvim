@@ -18,7 +18,7 @@ lvim.plugins = {
   "anufrievroman/vim-angry-reviewer",
 
   { "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
+    build = "cd app && npm install",
     ft = "markdown",
     config = function()
       vim.g.mkdp_auto_start = 1
@@ -34,11 +34,6 @@ lvim.plugins = {
   },
   {
     "AckslD/nvim-neoclip.lua",
-    requires = {
-      -- you'll need at least one of these
-      -- {'nvim-telescope/telescope.nvim'},
-      -- {'ibhagwan/fzf-lua'},
-    },
     config = function()
       require('neoclip').setup()
     end,
@@ -71,11 +66,12 @@ lvim.plugins = {
         -- optional configuration
       })
     end,
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
+    lazy = true,
+    -- requires = {
+    --   "MunifTanjim/nui.nvim",
+    --   "nvim-lua/plenary.nvim",
+    --   "nvim-telescope/telescope.nvim"
+    -- }
   },
 
   {
