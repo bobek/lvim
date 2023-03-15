@@ -17,7 +17,8 @@ lvim.plugins = {
 
   "anufrievroman/vim-angry-reviewer",
 
-  { "iamcco/markdown-preview.nvim",
+  {
+    "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
     ft = "markdown",
     config = function()
