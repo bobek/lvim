@@ -60,18 +60,21 @@ lvim.plugins = {
     end
   },
 
-  { "jackMort/ChatGPT.nvim",
+  {
+    "jackMort/ChatGPT.nvim",
     config = function()
       require("chatgpt").setup({
         -- optional configuration
       })
     end,
-    lazy = true,
-    -- requires = {
-    --   "MunifTanjim/nui.nvim",
-    --   "nvim-lua/plenary.nvim",
-    --   "nvim-telescope/telescope.nvim"
-    -- }
+    -- lazy = true,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  },
+
   },
 
   {
