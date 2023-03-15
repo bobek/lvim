@@ -83,10 +83,11 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 
 lvim.builtin.breadcrumbs.active = true
 
-local components = require("lvim.core.lualine.components")
-lvim.builtin.lualine.sections.lualine_y = {
-  components.location
-}
+-- Customization of the LuaLine components
+-- local components = require("lvim.core.lualine.components")
+-- lvim.builtin.lualine.sections.lualine_y = {
+--   components.location
+-- }
 
 lvim.builtin.dap.active = true
 
