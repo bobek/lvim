@@ -9,8 +9,7 @@ require "user.lsp"
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
--- lvim.colorscheme = "onedarker"
-lvim.colorscheme = "tokyonight-night"
+lvim.colorscheme = "bluloco-dark"
 
 vim.opt.showtabline = 0
 lvim.builtin.bufferline.active = false
