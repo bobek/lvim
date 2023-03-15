@@ -51,7 +51,8 @@ lvim.plugins = {
   -- config options:
   -- * linters.setup
   -- * formatters.setup
-  { "jayp0521/mason-null-ls.nvim",
+  {
+    "jayp0521/mason-null-ls.nvim",
     config = function()
       require "mason-null-ls".setup({
         automatic_installation = false,
