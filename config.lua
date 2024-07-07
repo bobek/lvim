@@ -1,15 +1,16 @@
-require "user.plugins"
+require("user.plugins")
 
-require "user.icons"
-require "user.git"
-require "user.todo-comments"
+require("user.icons")
+require("user.git")
+require("user.todo-comments")
 
-require "user.lsp"
+require("user.lsp")
 
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "bluloco-dark"
+-- lvim.colorscheme = "bluloco-dark"
+lvim.colorscheme = "kanagawa"
 
 vim.opt.showtabline = 0
 lvim.builtin.bufferline.active = false
@@ -32,27 +33,27 @@ lvim.keys.insert_mode["<C-b>"] = "<cmd>Telescope buffers<cr>"
 lvim.keys.insert_mode["<C-l>"] = "<c-g>u<Esc>[s1z=`]a<c-g>u"
 
 lvim.builtin.telescope.pickers.buffers = {
-  ignore_current_buffer = true,
-  previewer = false,
-  sort_mru = true,
-  theme = "dropdown",
+	ignore_current_buffer = true,
+	previewer = false,
+	sort_mru = true,
+	theme = "dropdown",
 }
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 lvim.builtin.telescope.on_config_done = function(telescope)
-  local actions = require "telescope.actions"
-  lvim.builtin.telescope.defaults.mappings.i["<c-d>"] = actions.delete_buffer
+	local actions = require("telescope.actions")
+	lvim.builtin.telescope.defaults.mappings.i["<c-d>"] = actions.delete_buffer
 
-  pcall(telescope.load_extension, "neoclip")
+	pcall(telescope.load_extension, "neoclip")
 
-  --   -- for input mode
-  --   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
-  --   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
-  --   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
-  --   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
-  --   -- for normal mode
-  --   lvim.builtin.telescope.defaults.mappings.n["<C-j>"] = actions.move_selection_next
-  --   lvim.builtin.telescope.defaults.mappings.n["<C-k>"] = actions.move_selection_previous
+	--   -- for input mode
+	--   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
+	--   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
+	--   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
+	--   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
+	--   -- for normal mode
+	--   lvim.builtin.telescope.defaults.mappings.n["<C-j>"] = actions.move_selection_next
+	--   lvim.builtin.telescope.defaults.mappings.n["<C-k>"] = actions.move_selection_previous
 end
 
 -- Use which-key to add extra bindings with the leader-key prefix
@@ -92,18 +93,18 @@ lvim.builtin.dap.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+	"bash",
+	"c",
+	"javascript",
+	"json",
+	"lua",
+	"python",
+	"typescript",
+	"tsx",
+	"css",
+	"rust",
+	"java",
+	"yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -150,28 +151,28 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   }
 -- }
 
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { name = "flake8" },
-  { name = "shellcheck" },
-}
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+	{ name = "flake8" },
+	{ name = "shellcheck" },
+})
 
 lvim.builtin.terminal.execs = { { "/bin/false", "gg", "pokus" } }
 
 vim.opt.textwidth = 80
 -- lvim.autocommands._formatoptions = {}
 vim.opt.formatoptions = {
-  ["1"] = true,
-  ["2"] = true, -- Use indent from 2nd line of a paragraph
-  q = true,     -- continue comments with gq"
-  c = true,     -- Auto-wrap comments using textwidth
-  r = true,     -- Continue comments when pressing Enter
-  n = true,     -- Recognize numbered lists
-  t = true,     -- autowrap lines using text width value
-  j = true,     -- remove a comment leader when joining lines.
-  -- Only break if the line was not longer than 'textwidth' when the insert
-  -- started and only at a white character that has been entered during the
-  -- current insert command.
-  l = true,
-  v = true,
+	["1"] = true,
+	["2"] = true, -- Use indent from 2nd line of a paragraph
+	q = true, -- continue comments with gq"
+	c = true, -- Auto-wrap comments using textwidth
+	r = true, -- Continue comments when pressing Enter
+	n = true, -- Recognize numbered lists
+	t = true, -- autowrap lines using text width value
+	j = true, -- remove a comment leader when joining lines.
+	-- Only break if the line was not longer than 'textwidth' when the insert
+	-- started and only at a white character that has been entered during the
+	-- current insert command.
+	l = true,
+	v = true,
 }
